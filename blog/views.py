@@ -6,6 +6,7 @@ from .models import Post
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
+from django.contrib.auth.decorators import login_required
 
 
 def post_list(request):
@@ -58,3 +59,23 @@ def post_remove(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
     return redirect('post_list')
+
+@login_required
+def post_new(request):
+    post_new
+
+@login_required
+def post_new(request):
+    post_edit
+
+@login_required
+def post_new(request):
+    post_draft_list
+
+@login_required
+def post_new(request):
+    post_remove
+
+@login_required
+def post_new(request):
+    post_publish
